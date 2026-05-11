@@ -272,4 +272,4 @@ export const NEWS_LIST = [
   },
 ];
 
-export const getNewsById = (id) => NEWS_LIST.find((n) => n.id === id);
+export const getNewsById = (id: string) => NEWS_LIST.find((n) => n.id === id);
