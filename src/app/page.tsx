@@ -78,12 +78,15 @@ export default function Home() {
       <main className="px-4 mt-4">
         {/* Banners */}
         <div className="bg-gradient-to-r from-[#DC0034] to-[#E7C154] rounded-xl p-5 mb-5 text-white shadow-sm relative overflow-hidden">
-          <div className="relative z-10">
+          {/* Logo on the left */}
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-[120%]">
+            <img src="/logo.png" alt="Logo" className="h-full w-auto object-contain" />
+          </div>
+
+          {/* Text on the right */}
+          <div className="relative z-20 text-right">
             <h2 className="text-xl font-bold mb-1 tracking-wider">房抵易融·贷款服务平台</h2>
             <p className="text-xs opacity-90">房抵·车抵·企业贷·公积金贷 全覆盖</p>
-          </div>
-          <div className="absolute right-[-20px] top-1/2 -translate-y-1/2 opacity-20">
-            <Landmark size={100} />
           </div>
         </div>
 
