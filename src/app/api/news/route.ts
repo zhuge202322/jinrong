@@ -1,8 +1,5 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-
-const dbPath = path.join(process.cwd(), 'src', 'data', 'news_db.json');
+import { kv } from '@vercel/kv';
 
 const defaultNews = [
   {
@@ -25,19 +22,17 @@ const defaultNews = [
   }
 ];
 
-function initDb() {
-  if (!fs.existsSync(dbPath)) {
-    fs.writeFileSync(dbPath, JSON.stringify(defaultNews, null, 2), 'utf8');
-  }
-}
-
 export async function GET() {
   try {
-    initDb();
-    const data = fs.readFileSync(dbPath, 'utf8');
-    return NextResponse.json(JSON.parse(data));
+    const data = await kv.get('news');
+    if (data) {
+      return NextResponse.json(data);
+    } else {
+      await kv.set('news', defaultNews);
+      return NextResponse.json(defaultNews);
+    }
   } catch (error) {
-    console.error("DB Read Error:", error);
+    console.error("KV Read Error:", error);
     return NextResponse.json(defaultNews);
   }
 }
@@ -45,10 +40,10 @@ export async function GET() {
 export async function POST(request: Request) {
   try {
     const data = await request.json();
-    fs.writeFileSync(dbPath, JSON.stringify(data, null, 2), 'utf8');
+    await kv.set('news', data);
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("DB Write Error:", error);
+    console.error("KV Write Error:", error);
     return NextResponse.json({ success: false, error: 'Failed to save' }, { status: 500 });
   }
 }
