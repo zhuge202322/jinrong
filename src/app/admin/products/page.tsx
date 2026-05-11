@@ -97,11 +97,11 @@ export default function ProductsAdminPage() {
       if (data.success) {
         setCurrentProduct({ ...currentProduct, qrCodeUrl: data.url });
       } else {
-        alert("上传失败！");
+        alert("上传失败：" + (data.error || "未知错误"));
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
-      alert("上传出错！");
+      alert("上传出错：" + (error.message || "网络错误"));
     } finally {
       setIsUploading(false);
       if (fileInputRef.current) {

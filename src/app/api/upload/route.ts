@@ -17,8 +17,8 @@ export async function POST(request: Request) {
 
     // Return the URL that can be used on the frontend
     return NextResponse.json({ success: true, url: blob.url });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Upload Error:", error);
-    return NextResponse.json({ success: false, error: 'Upload failed' }, { status: 500 });
+    return NextResponse.json({ success: false, error: error.message || 'Upload failed' }, { status: 500 });
   }
 }
