@@ -2,7 +2,10 @@ import { NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
 import { PRODUCTS } from '@/data/products';
 
-const kv = Redis.fromEnv();
+const kv = new Redis({
+  url: process.env.jinrong_KV_REST_API_URL || process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || '',
+  token: process.env.jinrong_KV_REST_API_TOKEN || process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || '',
+});
 
 export async function GET() {
   try {
