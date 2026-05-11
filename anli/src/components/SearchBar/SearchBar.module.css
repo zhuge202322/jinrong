@@ -1,0 +1,150 @@
+.wrapper {
+  position: relative;
+  padding: 0 16px 12px;
+  background: var(--card);
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 0 12px;
+  border: 1.5px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.searchBox:focus-within {
+  border-color: var(--primary);
+  background: var(--card);
+}
+
+.searchIcon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: var(--text-primary);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.clearBtn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.suggestions {
+  position: absolute;
+  top: calc(100% - 12px);
+  left: 16px;
+  right: 16px;
+  background: var(--card);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  z-index: 150;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+
+.suggestionItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--text-primary);
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.suggestionItem:active {
+  background: var(--bg);
+}
+
+.suggestionItem + .suggestionItem {
+  border-top: 1px solid var(--border-light);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% - 12px);
+  left: 16px;
+  right: 16px;
+  background: var(--card);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  z-index: 150;
+  padding: 12px;
+  border: 1px solid var(--border-light);
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.clearHistory {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 400;
+}
+
+.historyTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.historyTag {
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  transition: all 0.15s ease;
+}
+
+.historyTag:active {
+  background: var(--primary-bg);
+  color: var(--primary);
+  border-color: var(--primary);
+}

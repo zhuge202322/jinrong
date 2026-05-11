@@ -1,0 +1,132 @@
+.page {
+  min-height: 100%;
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 12px;
+  background: var(--card);
+  padding-top: var(--safe-top);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.backBtn,
+.shareBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  background: var(--bg);
+}
+
+.headerTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.article {
+  padding: 16px;
+}
+
+.articleHeader {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.categoryTag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--primary-bg);
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.articleTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.articleMeta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.articleBody {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.8;
+}
+
+.articleBody h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 20px 0 10px;
+  padding-left: 12px;
+  border-left: 3px solid var(--primary);
+}
+
+.articleBody p {
+  margin-bottom: 16px;
+  color: var(--text-secondary);
+}
+
+.articleBody strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.articleBody ul {
+  margin-bottom: 16px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.articleBody ul li {
+  padding: 8px 12px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.notFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-size: 14px;
+  color: var(--text-muted);
+}

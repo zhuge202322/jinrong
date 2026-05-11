@@ -1,0 +1,235 @@
+.page {
+  min-height: 100%;
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
+.main {
+  padding-bottom: 0;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  padding: 28px 20px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.heroAvatar {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 4px;
+  box-shadow: 0 4px 16px rgba(0, 82, 217, 0.3);
+}
+
+.heroTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+.heroSubtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.heroBadges {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.heroBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.section {
+  padding: 16px;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  padding-left: 10px;
+  border-left: 3px solid var(--primary);
+}
+
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.contactCard:active {
+  transform: scale(0.98);
+}
+
+.contactIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contactLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.contactValue {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.contactAction {
+  flex-shrink: 0;
+}
+
+.copyTag {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 500;
+  padding: 4px 10px;
+  background: var(--primary-bg);
+  border-radius: var(--radius-full);
+}
+
+.qrCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.qrCard {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-light);
+}
+
+.qrPlaceholder {
+  width: 100px;
+  height: 100px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--border);
+}
+
+.qrLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.qrHint {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.infoList {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 4px 0;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-light);
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.infoLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.infoValue {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.promises {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.promise {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}

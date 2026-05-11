@@ -1,0 +1,202 @@
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0 16px 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:active {
+  transform: scale(0.985);
+}
+
+/* 顶部：名称 + 标签 */
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 14px 14px 0;
+  gap: 8px;
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.35;
+  flex: 1;
+  min-width: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.tagBlue {
+  background: rgba(200, 134, 10, 0.1);
+  color: #C8860A;
+}
+
+.tagGreen {
+  background: rgba(82, 168, 75, 0.1);
+  color: #52A84B;
+}
+
+.tagOrange {
+  background: rgba(224, 123, 57, 0.1);
+  color: #C56A2D;
+}
+
+.tagRed {
+  background: rgba(200, 50, 50, 0.1);
+  color: #C83232;
+}
+
+.tagPurple {
+  background: rgba(133, 73, 226, 0.1);
+  color: #7C3AED;
+}
+
+/* 中间：亮点区域 */
+.highlightBar {
+  margin: 10px 14px 0;
+  padding: 10px 14px;
+  background: rgba(200, 134, 10, 0.06);
+  border-radius: 8px;
+  border-left: 3px solid #C8860A;
+}
+
+.highlightText {
+  font-size: 13px;
+  color: #6B4708;
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* 底部：数据行 */
+.bottom {
+  display: flex;
+  align-items: stretch;
+  padding: 12px 14px;
+  gap: 0;
+}
+
+.dataItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+}
+
+.dataItem + .dataItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: #f0f0f0;
+}
+
+.dataLabel {
+  font-size: 10px;
+  color: #999;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.dataValue {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.dataValueHighlight {
+  font-size: 14px;
+  font-weight: 700;
+  color: #D0343A;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* 按钮 */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 14px 14px;
+}
+
+.btnPrimary {
+  width: 100%;
+  height: 38px;
+  background: #C8860A;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 2px 8px rgba(200, 134, 10, 0.25);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.btnPrimary:active {
+  opacity: 0.82;
+  transform: scale(0.97);
+}
+
+.btnSecondary {
+  width: 100%;
+  height: 34px;
+  background: transparent;
+  color: #C8860A;
+  border: 1.5px solid #C8860A;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.btnSecondary:active {
+  background: rgba(200, 134, 10, 0.06);
+  transform: scale(0.97);
+}
+
+/* 进度条 */
+.progressTrack {
+  height: 4px;
+  background: transparent;
+  position: relative;
+}
+
+.progressBar {
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  transition: width 0.4s ease;
+}

@@ -1,0 +1,231 @@
+.page {
+  min-height: 100%;
+  min-height: 100dvh;
+  background: var(--bg);
+}
+
+.main {
+  flex: 1;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 8px;
+}
+
+.listTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.listCount {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+}
+
+.productList {
+  padding-bottom: 0;
+}
+
+.bottomTip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.emptyIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.emptyText {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.emptySubtext {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* 拿码进件弹窗 */
+.applyBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+  backdrop-filter: blur(2px);
+}
+
+.applyPanel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card);
+  border-radius: 20px 20px 0 0;
+  z-index: 201;
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.applyHandle {
+  width: 36px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+.applyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px 0;
+}
+
+.applyTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.applyClose {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.applyContent {
+  padding: 16px 24px 32px;
+}
+
+.applyProductName {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.applyBank {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.qrSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.qrPlaceholder {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border: 2px dashed var(--border);
+}
+
+.qrCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.qrHint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.qrDesc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.applySteps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+
+.applyStep {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.stepNum {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.applyNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 12px;
+  background: rgba(82, 196, 26, 0.08);
+  border-radius: var(--radius-sm);
+}
