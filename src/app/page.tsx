@@ -138,7 +138,7 @@ export default function Home() {
 
                   {/* Top Right Tag */}
                   <div className="absolute right-0 top-0 bg-[#FFF9E6] text-[#C49A00] text-xs px-3 py-1.5 rounded-bl-xl font-medium">
-                    {product.tags?.[1] || product.tags?.[0] || product.category}
+                    {product.tags?.[1] || product.tags?.[0] || CATEGORIES.find(c => c.id === product.category)?.label || product.category}
                   </div>
 
                   {/* Title */}
