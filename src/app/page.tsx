@@ -142,13 +142,13 @@ export default function Home() {
                   </div>
 
                   {/* Title */}
-                  <div className="flex items-center gap-1.5 mb-4 pl-1">
-                    <h3 className="text-[17px] font-bold text-gray-900">
+                  <div className="flex items-start gap-1.5 mb-4 pl-1 pr-16">
+                    <h3 className="text-[17px] font-bold text-gray-900 leading-snug">
                       {product.name}
                     </h3>
                     {product.featured && (
                       <Flame
-                        className="w-[18px] h-[18px] text-[#DC0034] fill-[#DC0034]/20"
+                        className="w-[18px] h-[18px] flex-shrink-0 mt-0.5 text-[#DC0034] fill-[#DC0034]/20"
                         strokeWidth={2}
                       />
                     )}
